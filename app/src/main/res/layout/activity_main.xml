@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Word Field -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,8 +71,6 @@
 
     <!--  Reset Password Field -->
 
-    <!--  Email Address Field -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -84,6 +84,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.578"
         tools:ignore="VisualLintOverlap" />
+
+    <!--  Email Address Field -->
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -113,11 +115,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields,VisualLintTextFieldSize" />
 
     <!-- Checkbox for Remember Password  -->
-
-    <!-- Login Button -->
 
     <CheckBox
         android:id="@+id/checkBoxTerms"
@@ -130,6 +130,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 
+    <!-- Login Button  -->
+
     <Button
         android:id="@+id/buttonProceed"
         android:layout_width="350dp"
@@ -141,7 +143,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
 
     <!-- Google Image -->
 
