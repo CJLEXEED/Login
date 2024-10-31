@@ -7,14 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Word Field -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logs"
-        android:textSize="40sp"
         android:textColorHint="#000000"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -28,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/policy"
-        android:textSize="15sp"
         android:textColorHint="#000000"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
@@ -43,8 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/or"
-        android:textSize="15sp"
         android:textColorHint="#000000"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -60,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log2"
-        android:textSize="15sp"
         android:textColorHint="#000000"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -95,8 +93,9 @@
         android:autofillHints=""
         android:hint="@string/email_address"
         android:inputType="text|number"
+        android:minHeight="48dp"
         android:textColorHint="#000000"
-        tools:ignore="TextFields"
+        tools:ignore="MissingConstraints,TextFields"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="231dp" />
 
@@ -111,6 +110,7 @@
         android:autofillHints=""
         android:hint="@string/password"
         android:inputType="text|number"
+        android:minHeight="48dp"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +130,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 
-    <!-- Login Button  -->
+    <!-- Login Button -->
 
     <Button
         android:id="@+id/buttonProceed"
@@ -148,32 +148,30 @@
     <!-- Google Image -->
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="86dp"
-        android:layout_height="67dp"
+        android:id="@+id/imageView4"
+        android:layout_width="94dp"
+        android:layout_height="87dp"
         android:contentDescription="@string/googlelink"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.708"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonProceed"
-        app:layout_constraintVertical_bias="0.38"
-        app:srcCompat="@drawable/google" />
+        app:layout_constraintVertical_bias="0.503"
+        app:srcCompat="@drawable/google"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
 
     <!-- Facebook Image -->
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="81dp"
-        android:layout_height="69dp"
-        android:layout_marginEnd="48dp"
+        android:id="@+id/imageView5"
+        android:layout_width="101dp"
+        android:layout_height="87dp"
         android:contentDescription="@string/facebooklink"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/buttonProceed"
-        app:layout_constraintVertical_bias="0.385"
-        app:srcCompat="@drawable/facebook" />
+        app:srcCompat="@drawable/facebook"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="279dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

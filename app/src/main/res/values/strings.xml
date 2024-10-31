@@ -11,4 +11,7 @@
     <string name="googlelink">TODO</string>
     <string name="facebooklink">facebook</string>
     <string name="reset_password">Reset password</string>
+    <string name="error_empty_fields">Please fill out all fields.</string>
+    <string name="error_accept_terms">Please accept the terms to proceed.</string>
+    <string name="login_successful">Login Successful!</string>
 </resources>
