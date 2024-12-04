@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
     }// Function to validate email
     private fun isValidEmail(email: String): Boolean {
-        return email.contains("@")
+        return email.contains("@,com")
     }
 }
 
