@@ -31,30 +31,44 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Initialize Views
-        editTextEmail = findViewById(R.id.editTextEmail)
-        editTextPassword = findViewById(R.id.editTextPassword)
-        checkBoxTerms = findViewById(R.id.checkBoxTerms)
-        buttonProceed = findViewById(R.id.buttonProceed)
+        val emailEditText: EditText = findViewById(R.id.editTextEmail)
+        val passwordEditText: EditText = findViewById(R.id.editTextPassword)
+        val loginButton: Button = findViewById(R.id.buttonProceed)
+        val rememberCheckBox: CheckBox = findViewById(R.id.checkBoxTerms)
 
         // Set Button OnClickListener
-        buttonProceed?.setOnClickListener {
-            val email = editTextEmail?.text.toString()
-            val password = editTextPassword?.text.toString()
-            val isTermsChecked = checkBoxTerms?.isChecked ?: false
+        loginButton.setOnClickListener {
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
+            val isTermsChecked = rememberCheckBox.isChecked
 
-            // Check for input validation
+            // Validate inputs
             when {
                 email.isEmpty() || password.isEmpty() -> {
                     Toast.makeText(this, R.string.error_empty_fields, Toast.LENGTH_SHORT).show()
                 }
+
+                !isValidEmail(email) -> {
+                    Toast.makeText(this, "Please enter a valid email with '@'", Toast.LENGTH_SHORT).show()
+                }
+
                 !isTermsChecked -> {
                     Toast.makeText(this, R.string.error_accept_terms, Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    Toast.makeText(this, R.string.login_successful, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        if (isTermsChecked) "Login successful with 'Remember Password' enabled!"
+                        else "Login successful!",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     // Handle further login logic here
                 }
             }
         }
+    }// Function to validate email
+    private fun isValidEmail(email: String): Boolean {
+        return email.contains("@")
     }
 }
+

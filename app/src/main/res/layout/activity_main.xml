@@ -53,20 +53,6 @@
 
     <!-- Message Field -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/log2"
-        android:textColorHint="#000000"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
-
     <!--  Reset Password Field -->
 
     <TextView
@@ -147,31 +133,7 @@
 
     <!-- Google Image -->
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="94dp"
-        android:layout_height="87dp"
-        android:contentDescription="@string/googlelink"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProceed"
-        app:layout_constraintVertical_bias="0.503"
-        app:srcCompat="@drawable/google"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp" />
-
     <!-- Facebook Image -->
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="101dp"
-        android:layout_height="87dp"
-        android:contentDescription="@string/facebooklink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProceed"
-        app:srcCompat="@drawable/facebook"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="279dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
